@@ -49,7 +49,7 @@ else:
 
 logging.basicConfig(level=logging.INFO);
 
-b = banner.Banner(server,user,password)
+b = banner.Banner(server)
 b.setTerm()
 
 reportfile = open('reportfile.txt','w')

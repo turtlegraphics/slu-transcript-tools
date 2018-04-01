@@ -13,11 +13,14 @@ authentication.
 As a positive, Java and the selenium standalone server are no longer required!
 
 First, in one command line window run:
-chromedriver
+`chromedriver`
 (this can be installed via homebrew with 'brew install chromedriver')
 
 Then run:
-cat idfile | python award-report.py http://127.0.0.1:4444/wd/hub bryan unusedpassword > transcriptfile.txt
+
+   cat idfile | python award-report.py http://localhost:4444/wd/hub bryan unusedpassword > transcriptfile.txt
+
+Here, 4444 should be the port number reported by chromedriver when run.
 
 Once the window opens, it goes to Banner.  You need to proceed through the
 login process by hand, within 120 seconds.

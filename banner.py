@@ -7,11 +7,9 @@ import pdb
 import time
 
 class Banner:
-  def __init__(self, server,username, password):
-    self._browser = webdriver.Remote(
-      command_executor=server,
-      desired_capabilities={'browserName':'firefox'}
-      )
+  def __init__(self, server, username="", password=""):
+    """username and password are unused, since login must be done manually"""
+    self._browser = webdriver.Chrome() 
 
     # Login
 #    self._browser.get('https://ssoprd.slu.edu/ssomanager/c/SSB')
